@@ -764,6 +764,9 @@ defaults write com.operasoftware.OperaDeveloper PMPrintingExpandedStateForPrint2
 # Install Sublime Text packages
 /bin/cp -f sublime/Package\ Control.sublime-settings ~/Library/Application\ Support/Sublime\ Text*/Packages/User/Package\ Control.sublime-settings 2> /dev/null
 
+# Install Sublime Text key bindings
+/bin/cp -f sublime/Default\ \(OSX\).sublime-keymap ~/Library/Application\ Support/Sublime\ Text*/Packages/User/Default\ \(OSX\).sublime-keymap 2> /dev/null
+
 ###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################

@@ -1,0 +1,8 @@
+[
+	{ "keys": ["super+shift+l"],
+		"command": "insert_snippet",
+		"args": {
+		"contents": "console.log(${1:}$SELECTION);${0}"
+		}
+	}
+]
