@@ -31,7 +31,7 @@ brew cask install iterm2
 brew cask install tower
 brew cask install p4merge
 brew cask install ngrok
-brew cask install marked
+brew cask install macdown
 brew cask install alfred
 brew cask install spectacle
 

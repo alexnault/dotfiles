@@ -40,11 +40,11 @@ function o() {
 	fi;
 }
 
-# Open a mardown file with Marked
-function marked() {
+# Open a mardown file with Macdown
+function md() {
 	if [ $# -eq 0 ]; then
-		open -a "Marked 2";
+		open -a "Macdown";
 	else
-		open -a "Marked 2" "$@";
+		open -a "Macdown" "$@";
 	fi
 }
