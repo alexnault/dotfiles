@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-echo "Installing formulas..."
+echo "Installing Homebrew formulas..."
 
 # Make sure we’re using the latest Homebrew.
 brew update
