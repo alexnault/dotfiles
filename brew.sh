@@ -17,9 +17,11 @@ brew install git-crypt
 brew install imagemagick
 brew install node
 brew install ruby
+brew install python
 brew install openssl
 brew install watchman
 brew install mongodb
+brew install awscli
 # brew install elasticsearch
 
 # Install GUI apps
