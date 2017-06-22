@@ -3,9 +3,7 @@
 function linkToHome() {
 	echo "Linking dotfiles..."
 	for file in {zshrc,zshenv,zprofile,zlogin,zlogout,zpreztorc,aliases,functions}; do
-		if ! [ -L "${ZDOTDIR:-$HOME}/.$file" ]; then
-			ln -s "${PWD}/$file" "${ZDOTDIR:-$HOME}/.$file";
-		fi
+		ln -sf "${PWD}/$file" "${ZDOTDIR:-$HOME}/.$file";
 	done
 	echo "Dotfiles linked!"
 }
