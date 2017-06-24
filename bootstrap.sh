@@ -1,9 +1,11 @@
 #!/usr/bin/env zsh
 
+dir_name=${0:a:h}
+
 function linkToHome() {
 	echo "Linking dotfiles..."
 	for file in {zshrc,zshenv,zprofile,zlogin,zlogout,zpreztorc,aliases,functions}; do
-		ln -sf "${PWD}/$file" "${ZDOTDIR:-$HOME}/.$file";
+		ln -sf "$dir_name/$file" "${ZDOTDIR:-$HOME}/.$file";
 	done
 	echo "Dotfiles linked!"
 }
