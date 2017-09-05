@@ -2,8 +2,9 @@
 
 echo "Installing npm packages..."
 
-npm install -g n
-npm install -g react-native-cli
-npm install -g yo
+npm i -g n
+npm i -g react-native-cli
+npm i -g yo
+npm i -g serve
 
 echo "Done"
