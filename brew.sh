@@ -37,6 +37,7 @@ brew cask install ngrok
 brew cask install macdown
 brew cask install alfred
 brew cask install spectacle
+brew cask install skitch
 
 # Remove outdated versions from the cellar.
 brew cleanup
