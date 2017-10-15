@@ -38,7 +38,7 @@ brew cask install macdown
 brew cask install alfred
 brew cask install spectacle
 brew cask install skitch
-brew cask install soulver
+brew cask install numi
 
 # Remove outdated versions from the cellar.
 brew cleanup
