@@ -1,0 +1,30 @@
+{
+    "eslint.autoFixOnSave": true,
+    "editor.cursorBlinking": "smooth",
+    "editor.cursorWidth": 3,
+    "editor.minimap.renderCharacters": false,
+    "editor.minimap.showSlider": "always",
+    "editor.occurrencesHighlight": false,
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": true,
+        "strings": false
+    },
+    "editor.rulers": [
+        100
+    ],
+    "editor.tabSize": 2,
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "flow.useNPMPackagedFlow": true,
+    "javascript.format.enable": false,
+    "languageStylus.useSeparator": false,
+    "typescript.format.enable": false,
+    "workbench.activityBar.visible": false,
+    "workbench.colorTheme": "Gruvbox Dark (Soft)",
+    "workbench.editor.enablePreviewFromQuickOpen": true,
+    "workbench.editor.labelFormat": "default",
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.startupEditor": "none",
+    "workbench.tips.enabled": false
+}

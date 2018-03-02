@@ -1,0 +1,15 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+	{ "key": "cmd+b", "command": "workbench.action.files.saveAll" },
+	{ "key": "cmd+y", "command": "redo", "when": "editorTextFocus" }
+    {
+        "key": "cmd+v",
+        "command": "editor.action.clipboardPasteAction",
+        "when": "!editorTextFocus"
+    },
+    {
+        "key": "cmd+shift+v",
+        "command": "editor.action.clipboardPasteAction",
+        "when": "editorTextFocus && !editorReadonly"
+    }
+]
