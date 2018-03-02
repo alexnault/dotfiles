@@ -14,6 +14,7 @@ brew install wget
 brew install curl
 brew install git
 brew install git-crypt
+brew install git-lfs
 brew install imagemagick
 brew install node
 brew install ruby
@@ -21,6 +22,7 @@ brew install python
 brew install openssl
 brew install watchman
 brew install mongodb
+brew install redis
 brew install awscli
 # brew install elasticsearch
 
