@@ -52,6 +52,12 @@ source ~/.dotfiles/npm.sh
 source ~/.dotfiles/macos.sh
 ```
 
++ Configure **VS Code** preferences:
+
+```bash
+source ~/.dotfiles/vscode.sh
+```
+
 ## Inspired by:
 
 + https://github.com/mathiasbynens/dotfiles
