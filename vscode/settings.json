@@ -13,7 +13,7 @@
     "editor.rulers": [
         100
     ],
-    "editor.tabSize": 2,
+    "editor.tabSize": 3,
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
     "flow.useNPMPackagedFlow": true,
@@ -22,7 +22,7 @@
     "typescript.format.enable": false,
     "workbench.activityBar.visible": false,
     "workbench.colorTheme": "Gruvbox Dark (Soft)",
-    "workbench.editor.enablePreviewFromQuickOpen": true,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.editor.labelFormat": "default",
     "workbench.editor.tabSizing": "shrink",
     "workbench.startupEditor": "none",
