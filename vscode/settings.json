@@ -1,5 +1,4 @@
 {
-    "eslint.autoFixOnSave": true,
     "editor.cursorBlinking": "smooth",
     "editor.cursorWidth": 3,
     "editor.minimap.renderCharacters": false,
