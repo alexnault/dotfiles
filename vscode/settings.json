@@ -19,6 +19,7 @@
     "javascript.format.enable": false,
     "languageStylus.useSeparator": false,
     "typescript.format.enable": false,
+    "window.title": "${activeEditorMedium}${separator}${rootName}",
     "workbench.activityBar.visible": false,
     "workbench.colorTheme": "Gruvbox Dark (Soft)",
     "workbench.editor.enablePreviewFromQuickOpen": false,
