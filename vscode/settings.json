@@ -12,7 +12,7 @@
     "editor.rulers": [
         100
     ],
-    "editor.tabSize": 3,
+    "editor.tabSize": 2,
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
     "flow.useNPMPackagedFlow": true,
@@ -21,10 +21,11 @@
     "typescript.format.enable": false,
     "window.title": "${activeEditorMedium}${separator}${rootName}",
     "workbench.activityBar.visible": false,
-    "workbench.colorTheme": "Gruvbox Dark (Soft)",
+    "workbench.colorTheme": "Material Theme",
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.editor.labelFormat": "default",
     "workbench.editor.tabSizing": "shrink",
     "workbench.startupEditor": "none",
-    "workbench.tips.enabled": false
+    "workbench.tips.enabled": false,
+    "workbench.colorCustomizations": {}
 }
