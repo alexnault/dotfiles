@@ -15,7 +15,6 @@
   "editor.tabSize": 2,
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
-  "flow.useNPMPackagedFlow": true,
   "javascript.format.enable": false,
   "languageStylus.useSeparator": false,
   "typescript.format.enable": false,
