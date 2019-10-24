@@ -26,5 +26,6 @@
   "workbench.editor.tabSizing": "shrink",
   "workbench.startupEditor": "none",
   "workbench.tips.enabled": false,
-  "workbench.colorCustomizations": {}
+  "workbench.colorCustomizations": {},
+  "explorer.confirmDelete": false
 }
