@@ -27,5 +27,6 @@
   "workbench.startupEditor": "none",
   "workbench.tips.enabled": false,
   "workbench.colorCustomizations": {},
+  "diffEditor.ignoreTrimWhitespace": false,
   "explorer.confirmDelete": false
 }
