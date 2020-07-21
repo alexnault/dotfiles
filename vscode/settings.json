@@ -12,8 +12,8 @@
   "editor.rulers": [
       100
   ],
+  "editor.scrollBeyondLastLine": false,
   "editor.tabSize": 2,
-  "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "javascript.format.enable": false,
   "languageStylus.useSeparator": false,
@@ -28,5 +28,19 @@
   "workbench.tips.enabled": false,
   "workbench.colorCustomizations": {},
   "diffEditor.ignoreTrimWhitespace": false,
-  "explorer.confirmDelete": false
+  "explorer.confirmDelete": false,
+  "window.zoomLevel": 0,
+  "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "explorer.confirmDragAndDrop": false,
+  "editor.fontFamily": "JetBrains Mono, Menlo, Monaco, 'Courier New', monospace",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.currentLine.enabled": false,
+  "files.insertFinalNewline": true,
+  "[csv]": {
+      "files.insertFinalNewline": false
+  },
 }
