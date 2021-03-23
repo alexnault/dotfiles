@@ -40,6 +40,7 @@ brew install --cask raycast
 brew install --cask rectangle
 # brew install --cask skitch
 brew install --cask numi
+brew install --cask spotify
 
 # Remove outdated versions from the cellar.
 brew cleanup
