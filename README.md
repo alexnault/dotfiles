@@ -40,12 +40,6 @@ source ~/.dotfiles/bootstrap.sh
 source ~/.dotfiles/brew.sh
 ```
 
-+ Install **NPM** packages:
-
-```bash
-source ~/.dotfiles/npm.sh
-```
-
 + Configure **Mac OS** defaults:
 
 ```bash
