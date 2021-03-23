@@ -9,37 +9,37 @@ brew update
 brew upgrade
 
 # Install command-line tools
-brew install zsh
+# brew install zsh
 brew install wget
 brew install curl
-brew install git
+# brew install git
 brew install git-crypt
 brew install git-lfs
 brew install imagemagick
 brew install node
 brew install ruby
 brew install python
-brew install openssl
+# brew install openssl
 # brew install watchman
-brew install mongodb
+# brew install mongodb
 brew install redis
-brew install awscli
+# brew install awscli
 # brew install elasticsearch
 
 # Install GUI apps
-brew cask install google-chrome
-brew cask install visual-studio-code
-brew cask install vlc
-brew cask install slack
-brew cask install iterm2
-brew cask install tower
-# brew cask install p4merge
-brew cask install ngrok
-# brew cask install macdown
-brew cask install alfred
-brew cask install spectacle
-# brew cask install skitch
-brew cask install numi
+brew install --cask google-chrome
+brew install --cask visual-studio-code
+brew install --cask vlc
+# brew install --cask slack
+brew install --cask iterm2
+brew install --cask tower
+# brew install --cask p4merge
+brew install --cask ngrok
+# brew install --cask macdown
+brew install --cask raycast
+brew install --cask rectangle
+# brew install --cask skitch
+brew install --cask numi
 
 # Remove outdated versions from the cellar.
 brew cleanup
