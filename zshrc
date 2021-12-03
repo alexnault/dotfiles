@@ -8,6 +8,6 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Source files
-for file in ~/.{aliases,functions}; do
+for file in ~/.{aliases,functions,localaliases,localfunctions}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
