@@ -18,5 +18,6 @@ fi
 for file in ~/.{aliases,functions,localaliases,localfunctions}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
