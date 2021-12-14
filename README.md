@@ -1,49 +1,37 @@
 # Dotfiles
 
-Ergonomic Mac OS configuration.
+Ergonomic shell configuration for MacOS and Linux (with Windows support through WSL).
 
 ## Requirements
 
-+ [Homebrew](https://brew.sh/)
++ [zsh](https://www.zsh.org/)
 + [Prezto](https://github.com/sorin-ionescu/prezto)
 
-Install **Homebrew**:
+Install **zsh**:
 
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+sudo apt-get install zsh
+chsh -s /bin/zsh
 ```
 
 Install **Prezto**:
 
 ```bash
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-chsh -s /bin/zsh
 ```
 
 ## Installation
 
-+ Clone repository:
+1. Clone the repository:
 
 ```bash
 git clone git://github.com/alexnault/dotfiles.git ~/.dotfiles
 ```
 
-+ Link **dotfiles**:
+2. Symlink the dotfiles to your home directory:
 
 ```bash
 source ~/.dotfiles/bootstrap.sh
-```
-
-+ Install **Homebrew** formulas:
-
-```bash
-source ~/.dotfiles/brew.sh
-```
-
-+ Configure **Mac OS** defaults:
-
-```bash
-source ~/.dotfiles/macos.sh
 ```
 
 ## Inspired by:
