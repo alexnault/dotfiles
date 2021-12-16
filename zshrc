@@ -19,5 +19,13 @@ for file in ~/.{aliases,functions,localaliases,localfunctions}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 
+# Search history with currently typed line
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey "$terminfo[kcuu1]" up-line-or-beginning-search
+bindkey "$terminfo[kcud1]" down-line-or-beginning-search
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
