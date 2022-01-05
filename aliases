@@ -68,5 +68,7 @@ alias path='echo -e ${PATH//:/\\n}'
 # Search in history (e.g. hg docker)
 alias hg='history | grep'
 
+alias dc='docker compose'
+
 # Unalias some default prezto aliases
 unalias lt # For localtunnel
