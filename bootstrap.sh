@@ -4,7 +4,6 @@ dir_name=${0:a:h}
 
 function linkToHome() {
 	echo "Linking dotfiles..."
-	# for file in {zshrc,zshenv,zprofile,zlogin,zlogout,zpreztorc,aliases,functions,localaliases,localfunctions}; do
 	for file in {zshrc,zshenv,zprofile,zlogin,zlogout,zpreztorc,aliases,functions,localaliases,localfunctions,config/yabai,config/skhd}; do
 		ln -sf "$dir_name/$file" "${ZDOTDIR:-$HOME}/.$file";
 	done
