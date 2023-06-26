@@ -25,7 +25,7 @@ git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$H
 1. Clone the repository:
 
 ```bash
-git clone git://github.com/alexnault/dotfiles.git ~/.dotfiles
+git clone https://github.com/alexnault/dotfiles.git ~/.dotfiles
 ```
 
 2. Symlink the dotfiles to your home directory:
