@@ -5,7 +5,7 @@
       "int" : 0
     },
     "adjacentResizing" : {
-      "int" : 0
+      "int" : 2
     },
     "allowAnyShortcut" : {
       "bool" : false
@@ -35,7 +35,7 @@
       "int" : 0
     },
     "appSpecs" : {
-      "string" : "[]"
+      "string" : "[{\"shortcut\":{\"keyCode\":18,\"modifierFlags\":262144},\"name\":\"Group 1\",\"id\":53,\"children\":[{\"x\":\"0\",\"display\":-3,\"y\":\"0\",\"id\":48,\"h\":\"1\",\"bundleId\":\"com.microsoft.VSCode\",\"w\":\"0.5\",\"loc\":9},{\"x\":\"0.5\",\"display\":-3,\"y\":\"0\",\"id\":47,\"h\":\"1\",\"bundleId\":\"com.google.Chrome\",\"w\":\"0.5\",\"loc\":9}],\"isGroup\":true,\"bringToFront\":true,\"loc\":0},{\"shortcut\":{\"keyCode\":19,\"modifierFlags\":262144},\"name\":\"Group 2\",\"id\":93,\"children\":[{\"x\":\"0\",\"display\":-3,\"y\":\"0\",\"id\":82,\"h\":\"1\",\"bundleId\":\"com.apple.mail\",\"w\":\"0.5\",\"loc\":9},{\"x\":\"0.5\",\"display\":-3,\"y\":\"0\",\"id\":83,\"h\":\"1\",\"bundleId\":\"com.microsoft.Outlook\",\"w\":\"0.5\",\"loc\":9}],\"isGroup\":true,\"bringToFront\":true,\"loc\":0},{\"shortcut\":{\"keyCode\":20,\"modifierFlags\":262144},\"name\":\"Group 3\",\"id\":67,\"children\":[{\"x\":\"0\",\"display\":-3,\"y\":\"0\",\"id\":55,\"h\":\"1\",\"bundleId\":\"com.microsoft.teams\",\"w\":\"1\",\"loc\":9}],\"isGroup\":true,\"bringToFront\":true,\"loc\":0},{\"shortcut\":{\"keyCode\":21,\"modifierFlags\":262144},\"name\":\"Group 4\",\"id\":106,\"children\":[{\"x\":\"0\",\"display\":-3,\"y\":\"0\",\"id\":99,\"h\":\"1\",\"bundleId\":\"com.microsoft.teams\",\"w\":\"0.5\",\"loc\":9},{\"x\":\"0.5\",\"display\":-3,\"y\":\"0\",\"id\":97,\"h\":\"1\",\"bundleId\":\"notion.id\",\"w\":\"0.5\",\"loc\":9}],\"isGroup\":true,\"bringToFront\":true,\"loc\":0}]"
     },
     "attemptMatchOnNextPrevDisplay" : {
       "int" : 0
@@ -119,7 +119,7 @@
       "float" : 0
     },
     "gestures" : {
-
+      "string" : "[35,{\"flags\":786432,\"trail\":0}]"
     },
     "helperRelaunch" : {
       "int" : 3
@@ -140,7 +140,7 @@
       "int" : 0
     },
     "landscapeSnapAreas" : {
-
+      "string" : "[2,{\"action\":2},6,{\"action\":13},8,{\"action\":14},1,{\"action\":15},4,{\"compound\":-2},5,{\"compound\":-3},3,{\"action\":16},7,{\"action\":110}]"
     },
     "launchOnLogin" : {
       "bool" : true
@@ -155,7 +155,7 @@
       "float" : 200
     },
     "mainReticleSpec" : {
-
+      "string" : "{\"b\":110,\"t\":2,\"id\":0,\"l\":0,\"bl\":13,\"r\":1,\"tl\":15,\"br\":14,\"tr\":16}"
     },
     "manualSpecs" : {
 
@@ -407,7 +407,7 @@
       "int" : 0
     },
     "windowSnapping" : {
-      "int" : 0
+      "int" : 1
     },
     "windowStopVelocity" : {
       "float" : 3
@@ -505,6 +505,6 @@
       "modifierFlags" : 786432
     }
   },
-  "timestamp" : 710186246.45319402,
+  "timestamp" : 710444772.50831902,
   "version" : "143"
 }
