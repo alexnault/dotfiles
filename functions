@@ -29,12 +29,3 @@ function o() {
 		open "$@";
 	fi;
 }
-
-# Open a mardown file with Macdown
-function md() {
-	if [ $# -eq 0 ]; then
-		open -a "Macdown";
-	else
-		open -a "Macdown" "$@";
-	fi
-}
