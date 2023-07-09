@@ -32,7 +32,7 @@
       "int" : 0
     },
     "applyGapToEdges" : {
-      "int" : 0
+      "int" : 1
     },
     "appSpecs" : {
       "string" : "[{\"shortcut\":{\"keyCode\":18,\"modifierFlags\":262144},\"name\":\"Group 1\",\"id\":53,\"children\":[{\"x\":\"0\",\"display\":-3,\"y\":\"0\",\"id\":48,\"h\":\"1\",\"bundleId\":\"com.microsoft.VSCode\",\"w\":\"0.5\",\"loc\":9},{\"x\":\"0.5\",\"display\":-3,\"y\":\"0\",\"id\":47,\"h\":\"1\",\"bundleId\":\"com.google.Chrome\",\"w\":\"0.5\",\"loc\":9}],\"isGroup\":true,\"bringToFront\":true,\"loc\":0},{\"shortcut\":{\"keyCode\":19,\"modifierFlags\":262144},\"name\":\"Group 2\",\"id\":93,\"children\":[{\"x\":\"0\",\"display\":-3,\"y\":\"0\",\"id\":82,\"h\":\"1\",\"bundleId\":\"com.apple.mail\",\"w\":\"0.5\",\"loc\":9},{\"x\":\"0.5\",\"display\":-3,\"y\":\"0\",\"id\":83,\"h\":\"1\",\"bundleId\":\"com.microsoft.Outlook\",\"w\":\"0.5\",\"loc\":9}],\"isGroup\":true,\"bringToFront\":true,\"loc\":0},{\"shortcut\":{\"keyCode\":20,\"modifierFlags\":262144},\"name\":\"Group 3\",\"id\":67,\"children\":[{\"x\":\"0\",\"display\":-3,\"y\":\"0\",\"id\":55,\"h\":\"1\",\"bundleId\":\"com.microsoft.teams\",\"w\":\"1\",\"loc\":9}],\"isGroup\":true,\"bringToFront\":true,\"loc\":0},{\"shortcut\":{\"keyCode\":21,\"modifierFlags\":262144},\"name\":\"Group 4\",\"id\":106,\"children\":[{\"x\":\"0\",\"display\":-3,\"y\":\"0\",\"id\":99,\"h\":\"1\",\"bundleId\":\"com.microsoft.teams\",\"w\":\"0.5\",\"loc\":9},{\"x\":\"0.5\",\"display\":-3,\"y\":\"0\",\"id\":97,\"h\":\"1\",\"bundleId\":\"notion.id\",\"w\":\"0.5\",\"loc\":9}],\"isGroup\":true,\"bringToFront\":true,\"loc\":0}]"
@@ -65,7 +65,7 @@
       "int" : 0
     },
     "contextMenuShortcut" : {
-
+      "string" : "null"
     },
     "cornerSnapAreaSize" : {
       "float" : 20
@@ -251,7 +251,7 @@
       "int" : 35
     },
     "saveLayoutShortcut" : {
-
+      "string" : "null"
     },
     "screenEdgeGapBottom" : {
       "float" : 0
@@ -392,7 +392,7 @@
       "float" : 400
     },
     "togggleTodoShortcut" : {
-
+      "string" : "null"
     },
     "traverseSingleScreen" : {
       "int" : 0
@@ -505,6 +505,6 @@
       "modifierFlags" : 786432
     }
   },
-  "timestamp" : 710444772.50831902,
+  "timestamp" : 710637767.95063496,
   "version" : "143"
 }
