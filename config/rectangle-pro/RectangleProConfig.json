@@ -32,7 +32,7 @@
       "int" : 0
     },
     "applyGapToEdges" : {
-      "int" : 1
+      "int" : 0
     },
     "appSpecs" : {
       "string" : "[{\"shortcut\":{\"keyCode\":18,\"modifierFlags\":262144},\"name\":\"Group 1\",\"id\":53,\"children\":[{\"x\":\"0\",\"display\":-3,\"y\":\"0\",\"id\":48,\"h\":\"1\",\"bundleId\":\"com.microsoft.VSCode\",\"w\":\"0.5\",\"loc\":9},{\"x\":\"0.5\",\"display\":-3,\"y\":\"0\",\"id\":47,\"h\":\"1\",\"bundleId\":\"com.google.Chrome\",\"w\":\"0.5\",\"loc\":9}],\"isGroup\":true,\"bringToFront\":true,\"loc\":0},{\"shortcut\":{\"keyCode\":19,\"modifierFlags\":262144},\"name\":\"Group 2\",\"id\":93,\"children\":[{\"x\":\"0\",\"display\":-3,\"y\":\"0\",\"id\":82,\"h\":\"1\",\"bundleId\":\"com.apple.mail\",\"w\":\"0.5\",\"loc\":9},{\"x\":\"0.5\",\"display\":-3,\"y\":\"0\",\"id\":83,\"h\":\"1\",\"bundleId\":\"com.microsoft.Outlook\",\"w\":\"0.5\",\"loc\":9}],\"isGroup\":true,\"bringToFront\":true,\"loc\":0},{\"shortcut\":{\"keyCode\":20,\"modifierFlags\":262144},\"name\":\"Group 3\",\"id\":67,\"children\":[{\"x\":\"0\",\"display\":-3,\"y\":\"0\",\"id\":55,\"h\":\"1\",\"bundleId\":\"com.microsoft.teams\",\"w\":\"1\",\"loc\":9}],\"isGroup\":true,\"bringToFront\":true,\"loc\":0},{\"shortcut\":{\"keyCode\":21,\"modifierFlags\":262144},\"name\":\"Group 4\",\"id\":106,\"children\":[{\"x\":\"0\",\"display\":-3,\"y\":\"0\",\"id\":99,\"h\":\"1\",\"bundleId\":\"com.microsoft.teams\",\"w\":\"0.5\",\"loc\":9},{\"x\":\"0.5\",\"display\":-3,\"y\":\"0\",\"id\":97,\"h\":\"1\",\"bundleId\":\"notion.id\",\"w\":\"0.5\",\"loc\":9}],\"isGroup\":true,\"bringToFront\":true,\"loc\":0}]"
@@ -65,7 +65,7 @@
       "int" : 0
     },
     "contextMenuShortcut" : {
-      "string" : "null"
+
     },
     "cornerSnapAreaSize" : {
       "float" : 20
@@ -119,7 +119,7 @@
       "float" : 0
     },
     "gestures" : {
-      "string" : "[35,{\"flags\":786432,\"trail\":0}]"
+      "string" : "[19,{\"flags\":0,\"trail\":2},35,{\"flags\":786432,\"trail\":0},2,{\"flags\":0,\"trail\":1},5,{\"flags\":0,\"trail\":4},4,{\"flags\":0,\"trail\":3}]"
     },
     "helperRelaunch" : {
       "int" : 3
@@ -206,10 +206,10 @@
       "float" : 10
     },
     "quickActionMinDist" : {
-      "float" : 10
+      "float" : 11.079693794250488
     },
     "quickActions" : {
-      "int" : 0
+      "int" : 1
     },
     "quickActionTimeout" : {
       "double" : 1
@@ -251,7 +251,7 @@
       "int" : 35
     },
     "saveLayoutShortcut" : {
-      "string" : "null"
+
     },
     "screenEdgeGapBottom" : {
       "float" : 0
@@ -392,7 +392,7 @@
       "float" : 400
     },
     "togggleTodoShortcut" : {
-      "string" : "null"
+
     },
     "traverseSingleScreen" : {
       "int" : 0
@@ -404,6 +404,9 @@
       "int" : 0
     },
     "unstashOnTerminate" : {
+      "int" : 0
+    },
+    "winDownDefaultAction" : {
       "int" : 0
     },
     "windowSnapping" : {
@@ -473,11 +476,11 @@
       "modifierFlags" : 917504
     },
     "nextDisplay" : {
-      "keyCode" : 124,
+      "keyCode" : 125,
       "modifierFlags" : 1835008
     },
     "previousDisplay" : {
-      "keyCode" : 123,
+      "keyCode" : 126,
       "modifierFlags" : 1835008
     },
     "restore" : {
@@ -505,6 +508,6 @@
       "modifierFlags" : 786432
     }
   },
-  "timestamp" : 710637767.95063496,
-  "version" : "143"
+  "timestamp" : 711567196.55874395,
+  "version" : "146"
 }
