@@ -5,19 +5,15 @@ function mkd() {
 	mkdir -p "$@" && cd "$_";
 }
 
+# Hook function to print the current directory's content when navigating
+function chpwd() {
+    emulate -L zsh
+    ls -a
+}
+
 # Change working directory to the top-most Finder window location
 function cdf() {
 	cd "$(osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)')";
-}
-
-# `v` with no arguments opens the current directory in Vim, otherwise opens the
-# given location
-function v() {
-	if [ $# -eq 0 ]; then
-		vim .;
-	else
-		vim "$@";
-	fi;
 }
 
 # `o` with no arguments opens the current directory, otherwise opens the given
