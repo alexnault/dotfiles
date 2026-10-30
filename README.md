@@ -1,43 +1,57 @@
 # Dotfiles
 
-Ergonomic shell configuration for MacOS and Linux (with Windows support through WSL).
+Minimal, fast zsh configuration for macOS (Apple Silicon) and Linux.
+
+No framework: plain zsh plus a few plugins loaded by [antidote](https://github.com/mattmc3/antidote) from a static bundle.
 
 ## Requirements
 
-+ [zsh](https://www.zsh.org/)
-+ [Prezto](https://github.com/sorin-ionescu/prezto)
++ [zsh](https://www.zsh.org/) and git
++ [fnm](https://github.com/Schniz/fnm) (optional, Node version manager)
 
-Install **zsh**:
+macOS:
 
 ```bash
-sudo apt-get install zsh
-chsh -s /bin/zsh
+brew install fnm
 ```
 
-Install **Prezto**:
+Linux:
 
 ```bash
-git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+sudo apt install zsh git && chsh -s "$(command -v zsh)"
+curl -fsSL https://fnm.vercel.app/install | bash -s -- --skip-shell
 ```
 
 ## Installation
 
-1. Clone the repository:
-
 ```bash
-git clone https://github.com/alexnault/dotfiles.git ~/.dotfiles
+git clone https://github.com/alexnault/dotfiles.git ~/Projects/dotfiles
+~/Projects/dotfiles/install.sh
 ```
 
-2. Symlink the dotfiles to your home directory:
+`install.sh` symlinks `zshenv`, `zprofile` and `zshrc` into `$HOME` (backing up real files to `*.bak`) and installs antidote. Re-run it any time.
+
+## Files
+
+| File | Purpose |
+|---|---|
+| `zshenv` | Every shell. Minimal. |
+| `zprofile` | Login shells. Environment and `PATH`. |
+| `zshrc` | Interactive shells. Options, history, completion, keys, prompt. |
+| `zsh_plugins.txt` | Plugin list. The bundle regenerates when this file changes. |
+| `aliases`, `functions` | Sourced from `zshrc`. |
+
+## Machine-specific config
+
+Put anything local to a machine (work aliases, SDK paths, installer snippets) in `~/.zshrc.local`. It is sourced last and is not part of this repo.
+
+Installers that append to `~/.zshrc` will write into this repo through the symlink. Move those lines to `~/.zshrc.local`.
+
+## Updating plugins
 
 ```bash
-source ~/.dotfiles/bootstrap.sh
+antidote update
 ```
-
-## Inspired by:
-
-+ https://github.com/mathiasbynens/dotfiles
-+ https://github.com/sorin-ionescu/dotfiles
 
 ## License
 
