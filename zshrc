@@ -43,9 +43,14 @@ if [[ -d $ANTIDOTE_DIR ]]; then
 	zsh_plugins=${XDG_CACHE_HOME:-~/.cache}/zsh/plugins.zsh
 	if [[ ! $zsh_plugins -nt $DOTFILES/zsh_plugins.txt ]]; then
 		mkdir -p ${zsh_plugins:h}
-		antidote bundle <$DOTFILES/zsh_plugins.txt >|$zsh_plugins
+		# Write to a temp file so a failed bundle never replaces a good cache
+		if antidote bundle <$DOTFILES/zsh_plugins.txt >|$zsh_plugins.tmp; then
+			mv -f $zsh_plugins.tmp $zsh_plugins
+		else
+			rm -f $zsh_plugins.tmp
+		fi
 	fi
-	source $zsh_plugins
+	[[ -r $zsh_plugins ]] && source $zsh_plugins
 	unset zsh_plugins
 fi
 
@@ -58,9 +63,11 @@ autoload -Uz compinit
 () {
 	setopt local_options extended_glob
 	if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
-		compinit
+		compinit -i
+		# compinit only rewrites the dump when completions change, so reset its age
+		touch ~/.zcompdump
 	else
-		compinit -C
+		compinit -i -C
 	fi
 }
 

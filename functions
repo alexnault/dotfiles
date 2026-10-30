@@ -6,6 +6,8 @@ function mkd() {
 # Print the current directory's content when navigating
 function chpwd() {
 	emulate -L zsh
+	# Skip subshells and redirected output so $(cd dir && ...) captures stay clean
+	[[ -t 1 && $ZSH_SUBSHELL -eq 0 ]] || return
 	ls -a
 }
 
