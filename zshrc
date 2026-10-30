@@ -4,6 +4,7 @@
 
 # Repository directory, resolved through the ~/.zshrc symlink
 DOTFILES=${${(%):-%x}:A:h}
+ZSH_CACHE=${XDG_CACHE_HOME:-~/.cache}/zsh
 
 #
 # Options
@@ -40,7 +41,7 @@ if [[ -d $ANTIDOTE_DIR ]]; then
 	autoload -Uz antidote
 
 	# Static bundle, regenerated only when the plugin list or antidote changes
-	antidote load $DOTFILES/zsh_plugins.txt ${XDG_CACHE_HOME:-~/.cache}/zsh/plugins.zsh
+	antidote load $DOTFILES/zsh_plugins.txt $ZSH_CACHE/plugins.zsh
 fi
 
 #
@@ -48,15 +49,16 @@ fi
 #
 
 autoload -Uz compinit
-# Full rebuild of the completion dump at most once a day
+# Full rebuild of the completion dump at most once a day, or when the plugins changed
 () {
 	setopt local_options extended_glob
-	if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
-		compinit
+	local dump=${ZDOTDIR:-$HOME}/.zcompdump
+	if [[ -n $dump(#qN.mh+24) || $ZSH_CACHE/plugins.zsh -nt $dump ]]; then
+		compinit -d $dump
 		# compinit only rewrites the dump when completions change, so reset its age
-		touch ~/.zcompdump
+		touch $dump
 	else
-		compinit -C
+		compinit -C -d $dump
 	fi
 }
 
@@ -64,7 +66,7 @@ zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*'
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' use-cache on
-zstyle ':completion:*' cache-path ${XDG_CACHE_HOME:-~/.cache}/zsh/compcache
+zstyle ':completion:*' cache-path $ZSH_CACHE/compcache
 _comp_options+=(globdots)   # complete hidden files
 
 #
