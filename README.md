@@ -1,6 +1,6 @@
 # Dotfiles
 
-Minimal, fast zsh configuration for macOS (Apple Silicon) and Linux.
+Minimal, fast zsh configuration for macOS and Linux.
 
 No framework: plain zsh plus a few plugins loaded by [antidote](https://github.com/mattmc3/antidote) from a static bundle.
 
