@@ -39,19 +39,8 @@ if [[ -d $ANTIDOTE_DIR ]]; then
 	fpath=($ANTIDOTE_DIR/functions $fpath)
 	autoload -Uz antidote
 
-	# Regenerate the static bundle only when the plugin list changes
-	zsh_plugins=${XDG_CACHE_HOME:-~/.cache}/zsh/plugins.zsh
-	if [[ ! $zsh_plugins -nt $DOTFILES/zsh_plugins.txt ]]; then
-		mkdir -p ${zsh_plugins:h}
-		# Write to a temp file so a failed bundle never replaces a good cache
-		if antidote bundle <$DOTFILES/zsh_plugins.txt >|$zsh_plugins.tmp; then
-			mv -f $zsh_plugins.tmp $zsh_plugins
-		else
-			rm -f $zsh_plugins.tmp
-		fi
-	fi
-	[[ -r $zsh_plugins ]] && source $zsh_plugins
-	unset zsh_plugins
+	# Static bundle, regenerated only when the plugin list or antidote changes
+	antidote load $DOTFILES/zsh_plugins.txt ${XDG_CACHE_HOME:-~/.cache}/zsh/plugins.zsh
 fi
 
 #
@@ -63,11 +52,11 @@ autoload -Uz compinit
 () {
 	setopt local_options extended_glob
 	if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
-		compinit -i
+		compinit
 		# compinit only rewrites the dump when completions change, so reset its age
 		touch ~/.zcompdump
 	else
-		compinit -i -C
+		compinit -C
 	fi
 }
 
@@ -126,6 +115,15 @@ PROMPT=$'%F{blue}%~%f${vcs_info_msg_0_}\n%(?.%F{magenta}.%F{red})❯%f '
 
 if (( $+commands[fnm] )); then
 	eval "$(fnm env --use-on-cd --shell zsh)"
+	# fnm's cd hook prints "Using Node ..."; keep it out of $(cd dir && ...) captures
+	functions[_fnm_autoload_hook_quiet]=$functions[_fnm_autoload_hook]
+	_fnm_autoload_hook() {
+		if [[ -t 1 && $ZSH_SUBSHELL -eq 0 ]]; then
+			_fnm_autoload_hook_quiet
+		else
+			_fnm_autoload_hook_quiet >/dev/null
+		fi
+	}
 fi
 
 #
