@@ -1,27 +1,28 @@
-#!/usr/bin/env bash
-
 # Create a new directory and enter it
 function mkd() {
-	mkdir -p "$@" && cd "$_";
+	mkdir -p "$@" && cd "$_"
 }
 
-# Hook function to print the current directory's content when navigating
+# Print the current directory's content when navigating
 function chpwd() {
-    emulate -L zsh
-    ls -a
+	emulate -L zsh
+	# Skip subshells and redirected output so $(cd dir && ...) captures stay clean
+	[[ -t 1 && $ZSH_SUBSHELL -eq 0 ]] || return
+	ls -a
 }
 
-# Change working directory to the top-most Finder window location
-function cdf() {
-	cd "$(osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)')";
-}
+if [[ $OSTYPE == darwin* ]]; then
+	# Change working directory to the top-most Finder window location
+	function cdf() {
+		cd "$(osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)')"
+	}
 
-# `o` with no arguments opens the current directory, otherwise opens the given
-# location
-function o() {
-	if [ $# -eq 0 ]; then
-		open .;
-	else
-		open "$@";
-	fi;
-}
+	# `o` with no arguments opens the current directory, otherwise opens the given location
+	function o() {
+		if [[ $# -eq 0 ]]; then
+			open .
+		else
+			open "$@"
+		fi
+	}
+fi

@@ -1,32 +1,18 @@
 #
-# Executes commands at login pre-zshrc.
+# Sourced by login shells, before zshrc. Environment and PATH go here.
 #
 
-#
-# Editors
-#
-
-export VISUAL=vim
-export EDITOR="$VISUAL"
-export PAGER='less'
-
-#
-# Language
-#
-
-if [[ -z "$LANG" ]]; then
-	export LANG='en_US.UTF-8'
+# Homebrew on Apple Silicon
+if [[ -x /opt/homebrew/bin/brew ]]; then
+	eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-#
-# Paths
-#
+export EDITOR=vim
+export VISUAL=$EDITOR
+export PAGER=less
+export LANG=${LANG:-en_US.UTF-8}
 
-# Ensure path arrays do not contain duplicates.
-typeset -gU cdpath fpath mailpath path
+# Deduplicate PATH entries
+typeset -gU path fpath
 
-# Set the list of directories that Zsh searches for programs.
-path=(
-	/usr/local/{bin,sbin}
-	$path
-)
+path=(~/.local/bin $path)
